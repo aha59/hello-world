@@ -12,20 +12,17 @@ stages:
   - deployment: dev_deploy
     pool:
       vmImage: 'ubuntu-latest'
-    environment: 'dev-hello'
+    environment:
+      name: 'dev-hello'
+      resourceName: myVM
+      resourceType: virtualMachine
     strategy:
       runOnce:
         deploy:
           steps:
           - script: echo "hello, dev world !!!"
-- stage: qa_deploy
-  jobs:
-  - deployment: qa_deploy
-    pool:
-      vmImage: 'ubuntu-latest'
-    environment: 'qa-hello'
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - script: echo "hello, qa world !!!"
+# 
+
+
+
+
