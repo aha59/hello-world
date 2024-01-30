@@ -21,7 +21,3 @@ stages:
         deploy:
           steps:
           - script: echo "hello, dev world !!!"
-
-
-
-
